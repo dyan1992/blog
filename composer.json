@@ -1,0 +1,16 @@
+{
+  "require":{
+    "monolog/monolog": "1.24.*",
+    "ruflin/elastica": "6.1.*",
+    "doctrine/dbal": "2.5.*",
+    "predis/predis": "1.1.*",
+    "twig/twig": "2.4.*",
+    "php-amqplib/php-amqplib":"2.8.*"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}
