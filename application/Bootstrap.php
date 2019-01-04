@@ -2,6 +2,7 @@
 
 use Yaf\Application;
 use Yaf\Registry;
+use Yaf\Loader;
 
 class Bootstrap extends \Yaf\Bootstrap_Abstract
 {
@@ -18,5 +19,9 @@ class Bootstrap extends \Yaf\Bootstrap_Abstract
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
         }
+    }
+
+    public function _initLoader(){
+        Loader::import(realpath(__DIR__.'/../vendor/'.'autoload.php'));
     }
 }

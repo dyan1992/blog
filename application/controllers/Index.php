@@ -8,6 +8,11 @@
 class IndexController extends \Yaf\Controller_Abstract
 {
     public function indexAction(){
-        echo 123;exit;
+        Common_Amqp_Receive::getInstance()->receive();
+        //$this->display('index');
+    }
+
+    public function listAction(){
+        (new Common_Amqp_Send())->send('hello world');
     }
 }
